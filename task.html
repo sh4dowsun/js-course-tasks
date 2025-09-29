@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Loops & Functions Example</h1>
+    <script>
+        function dogAge(age) {
+           return age * 7;
+        }
+        console.log("A person of age 18 is " + dogAge(18) + " in dog's age");
+        console.log("A person of age 5 is " + dogAge(5) + " in dog's age");
+        console.log("A person of age 0 is " + dogAge(0) + " in dog's age");
+        console.log("A person of age 2 is " + dogAge(2) + " in dog's age");
+
+        // Placed a semicolon.
+        let i = 5;
+        // Placed a semicolon.
+        let j = 10;
+        let k = 25;
+        // Placed the string data in double quotes.
+        let l = "Joe";
+        const arr = [3, 5, 7];
+
+        if (i < j) {
+            console.log("i");
+        } else if (j > k) {
+            console.log("k");
+        } else {
+            // Placed a double quote.
+            console.log("j");
+        }
+
+        // Changed the iteration range to 0-2.
+        for (let i = 0; i <= 2; ++i) {
+            console.log(arr[i]);
+        }
+    </script>
+</body>
+</html>
