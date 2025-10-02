@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workshop 2 Task 4</title>
+</head>
+<body>
+    <h1>Workshop 2 Task 4</h1>
+
+    <p id="result">Click OK or Cancel below.</p>
+    <button onclick="checkStudent()">Are you a student?</button>
+
+    <script>
+        function checkStudent() {
+            let isStudent = confirm("Are you a student?");
+            document.getElementById("result").innerHTML = "You are a student: " + isStudent;
+        }
+    </script>
+</body>
+</html>
