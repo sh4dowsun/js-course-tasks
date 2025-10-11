@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Styles & Animation</title>
+    <style>
+        .red-background {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <button id="changeStyleBtn">Toggle Red Background</button>
+    <p id="styledParagraph">This paragraph's style will change.</p>
+    <button id="animateBtn">Fade In Heading</button>
+    <h1 id="animatedHeading">I will fade in!</h1>
+
+    <script>
+        // 1. Changing individual style properties
+        const paragraph = document.getElementById('styledParagraph');
+        document.getElementById('changeStyleBtn').addEventListener('click', () => {
+            if (paragraph.style.backgroundColor === 'red') {
+                paragraph.style.backgroundColor = ''; // Reset
+                paragraph.style.color = '';
+            } else {
+                paragraph.style.backgroundColor = 'red';
+                paragraph.style.color = 'white';
+            }
+        });
+
+        // 2. Toggling CSS classes for animation
+        const headingToAnimate = document.getElementById('animatedHeading');
+        headingToAnimate.style.opacity = '0'; // Ensure it starts hidden
+        document.getElementById('animateBtn').addEventListener('click', () => {
+            headingToAnimate.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>

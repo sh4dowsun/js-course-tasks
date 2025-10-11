@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Content & Attributes</title>
+</head>
+<body>
+    <h1 id="myHeading">Original Heading Text</h1>
+    <p id="myParagraph">This is the original paragraph content.</p>
+    <img id="myImage" src="https://via.placeholder.com/150" alt="Placeholder Image"><br><br>
+    <a id="myLink" href="https://www.google.com">Visit Google</a>
+
+    <script>
+        // 1. Changing innerHTML (for rich text)
+        const headingElement = document.getElementById('myHeading');
+        headingElement.innerHTML = '<strong>New <em>Updated</em> Heading</strong>';
+
+        // 2. Changing textContent (for plain text)
+        const paragraphElement = document.getElementById('myParagraph');
+        paragraphElement.textContent = 'The paragraph content has been changed to plain text.';
+
+        // 3. Changing an attribute (src for an image)
+        const imageElement = document.getElementById('myImage');
+        imageElement.setAttribute('src', 'https://picsum.photos/id/237/150/150');
+        imageElement.setAttribute('alt', 'Cute Dog Image');
+
+        // 4. Changing multiple attributes (href and target for a link)
+        const linkElement = document.getElementById('myLink');
+        linkElement.setAttribute('href', 'https://www.w3schools.com');
+        linkElement.setAttribute('target', '_blank'); // Opens in a new tab
+        linkElement.textContent = 'Visit W3Schools'; // Also change link text
+    </script>
+</body>
+</html>

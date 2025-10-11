@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Elements</title>
+</head>
+<body>
+    <h1 id="unique-id">My Unique Heading</h1>
+    <p class="info-text">First info paragraph.</p>
+    <p class="info-text">Second info paragraph.</p>
+    <div>A simple div.</div>
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+    </ul>
+
+    <script>
+        // 1. Get element by ID (returns a single element)
+        const uniqueHeading = document.getElementById('unique-id');
+        console.log('Element by ID:', uniqueHeading.textContent);
+
+        // 2. Get elements by Class Name (returns an HTMLCollection)
+        const infoParagraphs = document.getElementsByClassName('info-text');
+        console.log('Elements by Class Name:', infoParagraphs[0].textContent);
+
+        // 3. Get elements by Tag Name (returns an HTMLCollection)
+        const allParagraphs = document.getElementsByTagName('p');
+        console.log('Elements by Tag Name (all paragraphs):', allParagraphs.length);
+
+        // 4. Query Selector (returns the first element that matches the CSS selector)
+        const firstDiv = document.querySelector('div');
+        console.log('First Div by Query Selector:', firstDiv.textContent);
+
+        // 5. Query Selector All (returns a NodeList of all matching elements)
+        const allListItems = document.querySelectorAll('ul li');
+        console.log('All List Items by Query Selector All:', allListItems.length);
+    </script>
+</body>
+</html>
