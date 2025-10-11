@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Compatibility</title>
+</head>
+<body>
+    <button id="compatBtn">Compatible Click</button>
+    <script>
+        var btn = document.getElementById('compatBtn');
+        function compatClick() { alert('Compatible!'); }
+        
+        // Check for support
+        if (window.addEventListener) {
+            btn.addEventListener('click', compatClick); // Modern browsers
+        } else if (window.attachEvent) {
+            btn.attachEvent('onclick', compatClick); // Legacy IE (<9)
+        }
+    </script>
+</body>
+</html>
